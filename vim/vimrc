@@ -1,0 +1,38 @@
+" Vundle template
+" I use YouCompleteMe as a plugin to vim
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+filetype plugin indent on
+
+" make editing a bit saner
+
+:set cindent
+:set number
+
+" faster split support
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" 4 spaces make the world go round
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+autocmd FileType make setlocal noexpandtab
+
+" make vertical splits slightly less ugly
+set fillchars+=vert:\  
+
